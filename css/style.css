@@ -14,9 +14,10 @@ body {
   .upper-nav {
     display: flex;
     color: white;
-    background-color: #272a31;
-    height: 30px;
-    justify-content: center;
+    background-color: #059669;
+    height: 40px;
+    justify-content: flex-end;
+    font-size: 18px;
   }
   
   .upper-nav i,
