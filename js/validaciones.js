@@ -1,18 +1,25 @@
-function Login() {
-  var done = 0;
-  var usuario = document.login.user.value;
-  var password = document.login.password.value;
+function login() {
+  var usuario = document.getElementById("usuario").value;
+  var password = document.getElementById("clave").value;
+
+  let text;
+
+  console.log(usuario);
+  console.log(password);
   if (usuario == "u1@mam.com" && password == "123") {
-    window.Location = "../page/userA.html";
+    window.location.href = "../page/userA.html";
   }
   if (usuario == "u2@mam.com" && password == "123") {
-    window.Location = "../page/userB.html";
+    window.location.href = "../page/userB.html";
   }
   if (usuario == "u3@mam.com" && password == "123") {
-    window.Location = "../page/userC.html";
+    window.location.href = "../page/userC.html";
   }
 
   if (usuario == "" && password == "") {
-    alert("valores no pueden ser vacios");
+    text = "valores no pueden ser vacios";
+  } else {
+    text = "datos erroneos";
   }
+  document.getElementById("mensaje").innerHTML = text;
 }
