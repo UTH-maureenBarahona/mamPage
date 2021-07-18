@@ -9,6 +9,7 @@
         <title>mano a mano</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://kit.fontawesome.com/668d372fa7.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/validaciones.js"></script> 
       </head>
 
   <head>
@@ -27,17 +28,17 @@
     
 <main class="form-signin">
     <div></div>
-  <form class="px-4 py-3" method="GET" action="userA.html">
+  <form class="px-4 py-3"  name="login">
     <img class="mb-4" src="../img/mamLogo.png" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" name="user" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Correo Electrónico</label>
     </div>
     
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name="email" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Contraseña </label>
     </div>
 
@@ -46,7 +47,8 @@
         <input type="checkbox" value="remember-me"> Recordarme
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-light"  type="submit">Ingresar</button>
+    <input  class="w-100 btn btn-lg btn-light" value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+    <button class="w-100 btn btn-lg btn-light"  onclick="Login()" type="submit">Ingresar</button>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="#">Usuario nuevo? Registrarse</a>
     <a class="dropdown-item" href="#">Olvido su contraseña ?</a>

@@ -1,48 +1,81 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<title>Page Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.83.1">
+  <title>Features · Bootstrap v5.0</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/albergue.css" />
+
+
 </head>
+
 <body>
+  <header>
+    <nav>
+      <div class="upper-nav">
+        <span><a href="../index.html">Mano a Mano</a></span>
+        <span>English</span>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="lower-nav">
+        <div class="main-content">
+          <h1>Mano a Mano</h1>
+          <p>El pueblo salvando al pueblo</p>
+        </div>
 
-<h1>Albergues</h1>
-<svg width="400" height="100">
-    <rect width="400" height="100" 
-    style="fill:rgb(86, 179, 132);stroke-width:10;stroke:rgb(0,0,0)" />
-  Sorry, your browser does not support inline SVG.
- 
-  </svg>
 
-  <table>
-      
-    <caption><h2>Meses de Activacion por pais</h2></caption>
-    <tr>
-      <th>Mes</th>
-      <th>Pais</th>
-    </tr>
-    <tr>
-      <td>Agosto</td>
-      <td>Honduras</td>
-    </tr>
-    <tr>
-      <td>Septiembre</td>
-      <td>El Salvador</td>
-    </tr>
-  </table>
+      </div>
+    </nav>
+  </header>
 
-<div>
-    <h2>Suscribe tu pais</h2>
-    <form action="/action_page.php">
-        <label for="Guatemala">Guatemala</label>
-        <input type="radio" name="pais" id="guatemala" value="Guatemala"><br>
-        <label for="Nicaragua">Nicaragua</label>
-        <input type="radio" name="pais" id="nicaragua" value="Nicaragua"><br>
-        <label for="otro">Otro</label>
-        <input type="radio" name="pais" id="otro" value="Otro"><br><br>
-        <input type="submit" value="Submit">
-      </form>
-</div>
-  
- 
+
+  <div class="background">
+    <div class="container">
+      <div class="panel pricing-table">
+
+        <div class="pricing-plan">
+          <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Albergue 1</h2>
+          <ul class="pricing-features">
+            <li class="pricing-features-item">Ubicacion </li>
+            <li class="pricing-features-item">Caracteristicas</li>
+          </ul>
+          <span class="pricing-price">HAY ESPACIO</span>
+          <a href="#/" class="pricing-button">Consultar</a>
+        </div>
+
+        <div class="pricing-plan">
+          <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Albergue 2</h2>
+          <ul class="pricing-features">
+            <li class="pricing-features-item">Ubicacion</li>
+            <li class="pricing-features-item">Caracteristicas</li>
+          </ul>
+          <span class="pricing-price1">NO HAY ESPACIO</span>
+          <a href="#/" class="pricing-button is-featured">CONSULTAR</a>
+        </div>
+
+        <div class="pricing-plan">
+          <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Albergue 3</h2>
+          <ul class="pricing-features">
+            <li class="pricing-features-item">Ubicacion</li>
+            <li class="pricing-features-item">Caracteristicas</li>
+          </ul>
+          <span class="pricing-price">HAY ESPACIO</span>
+          <a href="#/" class="pricing-button">Consultar</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
