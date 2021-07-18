@@ -23,3 +23,50 @@ function login() {
   }
   document.getElementById("mensaje").innerHTML = text;
 }
+
+//Solo permite introducir numeros.
+function soloNumeros(e) {
+  try {
+    var key = window.event ? e.which : e.keyCode;
+    if (key < 48 || key > 57) {
+      e.preventDefault();
+    }
+  } catch (error) {
+    document.getElementById("error").innerHTML = err.message;
+  }
+}
+
+function limpiarFormulario() {
+  try {
+    document.getElementById("rellenar").reset();
+  } catch (error) {
+    document.getElementById("error").innerHTML = err.message;
+  }
+}
+
+function imprimir() {
+  try {
+    window.print();
+  } catch (error) {
+    document.getElementById("error").innerHTML = err.message;
+  }
+}
+
+function InsertIntoTable() {
+  try {
+    var TableRow = "<tr></tr>";
+    for (key = 0; key < names.length; key++)
+      TableRow =
+        TableRow.substring(0, TableRow.length - 5) +
+        "<td>" +
+        names[key].value +
+        "</td>" +
+        TableRow.substring(TableRow.length - 5);
+
+    var TrElement = document.createElement("tr");
+    TrElement.innerHTML = TableRow;
+    document.getElementById("TableBody").appendChild(TrElement);
+  } catch (error) {
+    document.getElementById("error").innerHTML = error.message;
+  }
+}
