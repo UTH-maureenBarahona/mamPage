@@ -204,83 +204,74 @@
               <h1>Mano a Mano</h1>
               <p>El pueblo salvando al pueblo</p>
             </div>
-           
+
           </div>
           <br>
 
-          <div class ="container">
-            <strong><h3>Juan Perez</h3></strong>
+          <div class="container">
+            <strong>
+              <h3>Registro de Paises</h3>
+            </strong>
             <br>
-            <form name ="rellenar">
-            <label for="numId" class="form-label">Código de Usuario</label>
-            <br>
-            <input type="text" class="form-control" id="codUsuario" value="1" readonly>
-            <br>
-            <label for="input">Nombre</label>
-            <br>
-            <input type="text" class="form-control" name="nombre" id="nombre" value="Juan Perez" required>
-            <br>
-            <label for="input">Teléfono</label>
-            <br>
-            <input type="text" class="form-control" name="telefono" id="telefono" onkeypress="soloNumeros(event)" maxlength="8" required>
-            <br>
-            <label for="input">Pais</label>
-            <br>
-            <select class="form-select" id="pais">
-              <option value="1">Honduras</option>
-            </select>
-            <br>
-            <label for="input">Departamento</label>
-            <br>
-            <select class="form-select" id="depto">
-              <option value="1">Francisco Morazán</option>
-              <option value="2">Cortés</option>
-            </select>
-            <br>
-            <label for="input">Ciudad</label>
-            <br>
-            <select class="form-select" id="ciudad">
-              <option value="1">Distrito Central</option>
-              <option value="2">San Pedro Sula</option>
-            </select>
-            <br>
-            <br>
-            <label for="input">Dirección</label>
-            <br>
-            <input type="text" class="form-control" name="direccion" id="direccion" required>
-            <br>
-            <label for="input">Fecha de nacimiento</label>
-            <br>
-            <input type="date" class="form-control" name="fNacimiento" id="fNacimiento" step="1" value="1990-12-25"
-              required>
-            <br>          
-            <label for="input">Correo electronico</label>
-            <br>
-            <input type="email"  class="form-control" id="email" value="u1@mam.com" readonly>
-            <br>   
-            <label for="numId" class="form-label">Estado</label>
-            <br>
-            <input type="text" class="form-control" id="codUsuario" value="Activo" readonly>
-            <br>
-            <div class="btn-group me-2">
-              <button type="submit" class="btn btn-primary" onclick="limpiarFormulario()">Limpiar Pantalla</button>
 
-            </div>
-            <div class="btn-group me-2">
-              <button type="submit" class="btn btn-primary" id="almacena" onclick="almacenar()">Almacenar</button>
-            </div>
-            <div class="btn-group me-2">
-              <button type="submit" class="btn btn-primary" onclick="imprimir()">Imprimir</button>
-            </div>  
-            </form>   
-            <br>
-            
-          </div>
+              <label for="numId" class="form-label">Código ISO pais</label>
+              <br>
+              <input type="text" class="form-control" name="name[]" id="codPais" required>
+              <br>
+              <label for="input">Nombre </label>
+              <br>
+              <input type="text" class="form-control" name="name[]" id="nombrePais" required>
+              <br>
+              <label for="input">Estado</label>
+              <br>
+              <input type="text" class="form-control" name="name[]" id="estado" onkeypress="soloNumeros(event)"
+                maxlength="1" placeholder="1 Activo 0 Inactivo" required>
+              <br>
+             
+              <p id="error"></p>
+              <div class="btn-group me-2">
+                <button type="submit" class="btn btn-primary" onclick="limpiarFormulario()">Limpiar Pantalla</button>
+
+              </div>
+              <div class="btn-group me-2">
+                <button type="submit" class="btn btn-primary" id="almacena" onclick="InsertIntoTable()">Almacenar</button>
+              </div>
+              <div class="btn-group me-2">
+                <button type="submit" class="btn btn-primary" onclick="imprimir()">Imprimir</button>
+              </div>
        
+            <br>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              </br>
+              <h2>Tabla Paises</h2>
+              <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th>Código ISO pais</th>
+                      <th>Nombre</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="TableBody">
+                  </tbody>
+                </table>
+
+              </div>
+            </main>
+          </div>
+
         </nav>
       </header>
-      
 
+      <footer class="text-center">
+        <div class="mb-2">
+          
+        </div>
+        <div>
+         
+        </div>
+      </footer>
 
 
       <footer class="text-center">
