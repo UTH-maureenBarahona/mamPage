@@ -136,7 +136,7 @@
                     <a href="../page/Acontecimientos.html">Acontecimientos</a>
                   </li>
                   <li>
-                    <a href="../page/Afectados.html">Afectados</a>
+                    <a href="../page/Afectados.html">Acontecimientos</a>
                   </li>
                 </ul>
               </div>
@@ -243,14 +243,79 @@
 
           <div class="container">
             <strong>
-              <h3>Registro Tipo Voluntarios</h3>
+              <h3>Registro de Afectados</h3>
             </strong>
             <br>
-            <label for="numId"  class="form-label ">Id Tipo Voluntario</label>
+            <label for="numId" class="form-label">IdAfectado</label>
             <br>
-            <input type="text" class="form-control" onkeypress="soloNumeros(event)" name="name[]" id="IdORG" required>
-            <br>            
+            <input type="text" class="form-control" id="IdAfectado" placeholder="Ingresar solo numeros sin guion"
+              onkeypress="soloNumeros(event)" maxlength="13" required="">
+            <br>
+            <label for="input">Nombre</label>
+            <br>
+            <input type="text" class="form-control" name="Nombre" id="Nombre" required>
+            <br>
+            <label for="input">Apellidos</label>
+            <br>
+            <input type="text" class="form-control" name="apellidos" id="apellidos" required>
+            <br>
+            <label for="input">Fecha de Registro</label>
+            <br>
+            <input type="date" class="form-control" name="fRegistro" id="fRegistro" step="1" value="1990-12-25"
+              required>
+            <br>
+            <label for="input">Edad</label>
+            <br>
+            <input type="text" class="form-control" name="edad" id="edad" required>
+            <br>
+            <label for="input">Condicion</label>
+            <br>
+            <input type="text" class="form-control" name="condicion" id="condicion" onkeypress="soloNumeros(event)"
+              required>
+            <br>
+            <label for="input">Fotografía ****</label>
+            <br>
+            <input type="text" class="form-control" name="fotografia" id="fotografia" required>
+            <br>
+            <label for="input">Fecha última vez visto</label>
+            <br>
+            <input type="date" class="form-control" name="fUltimaVezVisto" id="fUltimaVezVisto" step="1"
+              value="1990-12-25" required>
+            <br>
+            <label for="input">Características Persona</label>
+            <br>
+            <input type="text" class="form-control" name="caracteristicasp" id="caracteristicasp"
+              onkeypress="soloNumeros(event)" required>
+            <br>
+            <label for="numId" class="form-label">IdPais</label>
+            <br>
+            <input type="text" class="form-control" id="IdPais" placeholder="Ingresar solo numeros sin guion"
+              onkeypress="soloNumeros(event)" maxlength="13" required="">
+            <br>
+            <label for="numId" class="form-label">IdDepartamento</label>
+            <br>
+            <input type="text" class="form-control" id="IdDepartamento" placeholder="Ingresar solo numeros sin guion"
+              onkeypress="soloNumeros(event)" maxlength="13" required="">
+            <br>
+            <label for="numId" class="form-label">IdMunicipio</label>
+            <br>
+            <input type="text" class="form-control" id="IdMunicipio" placeholder="Ingresar solo numeros sin guion"
+              onkeypress="soloNumeros(event)" maxlength="13" required="">
+            <br>
+            <label for="input">Lugar Actual</label>
+            <br>
+            <input type="text" class="form-control" name="lugarActual" id="lugarActual" onkeypress="soloNumeros(event)"
+              required>
+            <br>
+            <label for="numId" class="form-label">IdAlbergue</label>
+            <br>
+            <input type="text" class="form-control" id="IdAlbergue" placeholder="Ingresar solo numeros sin guion"
+              onkeypress="soloNumeros(event)" maxlength="13" required="">
+            <br>
             <label for="input">Estado</label>
+            <br>
+            <input type="text" class="form-control" name="name[]" id="estado" onkeypress="soloNumeros(event)"
+              maxlength="1" placeholder="0 Inactivo, 1 Activo" required>
             <br>
             <label for="input">Usuario adición </label>
             <br>
@@ -286,18 +351,30 @@
             <br>
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               </br>
-              <h2>Tabla Voluntarios</h2>
+              <h2>Tabla Registro de Administradores de Albergue</h2>
               <div class="table-responsive">
                 <table class="table table-striped table-sm">
                   <thead>
                     <tr>
-                      <th>Id Tipo Voluntario</th>
-                      <th>Estado</th>
+                      <th>IdAfectado</th>
+                      <th>nombre</th>
+                      <th>apellido</th>
+                      <th>fechaRegistro</th>
+                      <th>edad</th>
+                      <th>condicion</th>
+                      <th>fotografia</th>
+                      <th>ultimaVezVisto</th>
+                      <th>caracteristicasPersona</th>
+                      <th>IdPais</th>
+                      <th>IdDepartamento</th>
+                      <th>IdMunicipio</th>
+                      <th>lugarActual</th>
+                      <th>IdAlbergue</th>
+                      <th> Estado </th>
                       <th>Usuario adición</th>
                       <th>Fecha creación</th>
                       <th>Fecha modificación</th>
                       <th>Usuario última modificación</th>
-
                     </tr>
                   </thead>
                   <tbody id="TableBody">
